@@ -1,0 +1,64 @@
+/* selecteurs CSS */
+/* document.QuerySelector() */
+/* document.QuerySelectorAll() */
+h1{
+
+}
+
+#main{
+
+}
+
+.title{
+
+}
+
+h1.title#main{}
+
+h1,.title{
+
+}
+
+/* Descendants */
+h1 .title{
+
+}
+/* Enfants */
+h1 > .title{
+
+}
+
+h1 + .title{
+
+}
+
+h1 ~ .title{
+
+}
+
+[href]{
+
+}
+
+[href='www.google.fr']{
+
+}
+[href$=".pdf"]{
+  /* Liens vers des pdfs */
+}
+
+[href^="http://"]{
+    /* Liens non sécurisé */
+  }
+
+[href~="google"]{
+    /* Liens vers google quelque chose */
+  }
+
+  td:nth-child(5){
+
+  }
+
+  td:nth-child(2n+1){
+        /* td en position impaire */
+  }
