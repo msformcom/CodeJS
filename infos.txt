@@ -1,0 +1,19 @@
+Session: 24101327
+Salle: Labo11
+Formateur: DMS
+Date de début: 2024-09-09
+
+http://lab.ib-formation.fr
+
+Salle	Poste	Username	Password
+Labo11	Poste00	ib.51110009	wdREQTC9
+Labo11	Poste01	phuchau.nguyen09	h6muWpA7
+Labo11	Poste02	bertrand.almairac09	Z7F23umX
+Labo11	Poste03	suzanne.stoop09	PL7zfgxc
+Labo11	Poste04	nicolas.chasles09	MVynpNwr
+Labo11	Poste05	jose.luismota09	tadcH8D6
+Labo11	Poste06	frederic.derame09	zUcxFftM
+Labo11	Poste07	anthony.bouchereau09	uJdYg8Pn
+Labo11	Poste08	otman.maktoufbouhlel09	G7n2WmJZ
+
+Mot de passe poste travail : Pa55w.rd
