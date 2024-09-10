@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded",async ()=>{
         let r=await  getPositionAsync();
         let positionPlaceholder=document.querySelector("#position-placeholder")!;
         positionPlaceholder.innerHTML=`Position : ${r.latitude}, ${r.longitude}`
-        let data=SunCalc.getTimes();
+        let data=SunCalc.getTimes(new Date(),r.latitude,r.longitude);
         positionPlaceholder.innerHTML+=` sunrise :${data.sunrise}`;
    
     } catch (error ) {
