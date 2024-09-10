@@ -1,0 +1,1 @@
+import{Sport}from"./models/sport.js";let a=1,s=new Sport("nike","basket");console.log(s.data);let libelle=s.libelle.toLowerCase();

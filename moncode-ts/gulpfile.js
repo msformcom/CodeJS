@@ -17,7 +17,7 @@ function compileTs(){
         // les compiler
         .pipe(compilateur())
         // minification
-        .pipe(minify({ext:{min:".js"},noSource: true }))
+       .pipe(minify({ext:{min:".mjs"} }))
         // ecrire les commentaire sourcemaps
         .pipe(sourcemaps.write())
                 // copier dans dist

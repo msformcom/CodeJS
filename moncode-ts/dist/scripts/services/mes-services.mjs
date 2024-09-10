@@ -1,0 +1,1 @@
+export function getPositionAsync(){return new Promise((o,n)=>{navigator.geolocation.getCurrentPosition(n=>{o(n.coords)},o=>{n(new Error("La position n'a pas pu être calculée"))})})}

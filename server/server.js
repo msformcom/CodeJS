@@ -17,7 +17,7 @@ server.get("/hello",(req,res)=>{
     // fonction exécutée lorsque la requete porte sur /hello
     // req => objet contenant les infos de la requetes
     // res => objet représentant nla réponse
-    res.send("Hello world");
+    res.send("Bonjour");
 });
  
 // middleware qui distribue les fichiers dans le dossier
