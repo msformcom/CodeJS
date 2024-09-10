@@ -1,9 +1,2 @@
-import { Sport } from "./models/sport.js";
-let a = 1;
-let s = new Sport("nike", "basket");
-console.log(s.data);
-// if(!s.libelle){
-//     s.libelle="Basket";
-// }
-// ! indique que la donnée n'est pas falsy
-let libelle = s.libelle.toLowerCase();
+import{Sport}from"./models/sport.js";let a=1,s=new Sport("nike","basket");console.log(s.data);let libelle=s.libelle.toLowerCase();
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNjcmlwdHMvaW5kZXgudHMiXSwibmFtZXMiOlsiU3BvcnQiLCJhIiwicyIsImNvbnNvbGUiLCJsb2ciLCJkYXRhIiwibGliZWxsZSIsInRvTG93ZXJDYXNlIl0sIm1hcHBpbmdzIjoiT0FBU0EsVUFBYSxvQkFDdEIsSUFBSUMsRUFBSSxFQUNKQyxFQUFJLElBQUlGLE1BQU0sT0FBUSxVQUMxQkcsUUFBUUMsSUFBSUYsRUFBRUcsTUFLZCxJQUFJQyxRQUFVSixFQUFFSSxRQUFRQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFNwb3J0IH0gZnJvbSBcIi4vbW9kZWxzL3Nwb3J0LmpzXCI7XHJcblxyXG5sZXQgYT0xO1xyXG5sZXQgcz1uZXcgU3BvcnQoXCJuaWtlXCIsXCJiYXNrZXRcIik7XHJcbmNvbnNvbGUubG9nKChzIGFzIGFueSkuZGF0YSk7XHJcbi8vIGlmKCFzLmxpYmVsbGUpe1xyXG4vLyAgICAgcy5saWJlbGxlPVwiQmFza2V0XCI7XHJcbi8vIH0gXHJcblxyXG4vLyAhIGluZGlxdWUgcXVlIGxhIGRvbm7DqWUgbidlc3QgcGFzIGZhbHN5XHJcbmxldCBsaWJlbGxlPXMubGliZWxsZSEudG9Mb3dlckNhc2UoKTsgICJdLCJmaWxlIjoic2NyaXB0cy9pbmRleC5qcyJ9

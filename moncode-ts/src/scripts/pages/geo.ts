@@ -19,6 +19,6 @@ document.addEventListener("DOMContentLoaded",async ()=>{
     } catch (error ) {
         console.log((error as Error).message);
     }
- 
+  
 
 });

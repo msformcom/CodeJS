@@ -1,16 +1,2 @@
-// Création d'une fonction async avec promise
-// et résultat de type GeolocationCoordinates
-export function getPositionAsync() {
-    return new Promise((resolve, reject) => {
-        // ici, écriture du code asynchrone
-        navigator.geolocation.getCurrentPosition(
-        // En cas de succes
-        (position) => {
-            resolve(position.coords);
-        }, 
-        // en cas d'erreur
-        (err) => {
-            reject(new Error("La position n'a pas pu être calculée"));
-        });
-    });
-}
+export function getPositionAsync(){return new Promise((o,n)=>{navigator.geolocation.getCurrentPosition(n=>{o(n.coords)},o=>{n(new Error("La position n'a pas pu être calculée"))})})}
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNjcmlwdHMvc2VydmljZXMvbWVzLXNlcnZpY2VzLnRzIl0sIm5hbWVzIjpbImdldFBvc2l0aW9uQXN5bmMiLCJQcm9taXNlIiwicmVzb2x2ZSIsInJlamVjdCIsIm5hdmlnYXRvciIsImdlb2xvY2F0aW9uIiwiZ2V0Q3VycmVudFBvc2l0aW9uIiwicG9zaXRpb24iLCJjb29yZHMiLCJlcnIiLCJFcnJvciJdLCJtYXBwaW5ncyI6Ik9BRU8sU0FBU0EsbUJBQ1osT0FBTyxJQUFJQyxRQUFRLENBQUNDLEVBQVNDLEtBRXpCQyxVQUFVQyxZQUFZQyxtQkFFckJDLElBQ0dMLEVBQVFLLEVBQVNDLFNBR3BCQyxJQUNHTixFQUFPLElBQUlPLE1BQU0iLCJzb3VyY2VzQ29udGVudCI6WyIvLyBDcsOpYXRpb24gZCd1bmUgZm9uY3Rpb24gYXN5bmMgYXZlYyBwcm9taXNlXHJcbi8vIGV0IHLDqXN1bHRhdCBkZSB0eXBlIEdlb2xvY2F0aW9uQ29vcmRpbmF0ZXNcclxuZXhwb3J0IGZ1bmN0aW9uIGdldFBvc2l0aW9uQXN5bmMoKSA6IFByb21pc2U8R2VvbG9jYXRpb25Db29yZGluYXRlcz57XHJcbiAgICByZXR1cm4gbmV3IFByb21pc2UoKHJlc29sdmUscmVqZWN0KT0+e1xyXG4gICAgICAgIC8vIGljaSwgw6ljcml0dXJlIGR1IGNvZGUgYXN5bmNocm9uZVxyXG4gICAgICAgICAgICBuYXZpZ2F0b3IuZ2VvbG9jYXRpb24uZ2V0Q3VycmVudFBvc2l0aW9uKFxyXG4gICAgICAgICAgICAvLyBFbiBjYXMgZGUgc3VjY2VzXHJcbiAgICAgICAgICAgIChwb3NpdGlvbik9PntcclxuICAgICAgICAgICAgICAgIHJlc29sdmUocG9zaXRpb24uY29vcmRzKTtcclxuICAgICAgICAgICAgfSxcclxuICAgICAgICAgICAgLy8gZW4gY2FzIGQnZXJyZXVyXHJcbiAgICAgICAgICAgIChlcnIpPT57XHJcbiAgICAgICAgICAgICAgICByZWplY3QobmV3IEVycm9yKFwiTGEgcG9zaXRpb24gbidhIHBhcyBwdSDDqnRyZSBjYWxjdWzDqWVcIikpXHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICApO1xyXG4gICAgfSlcclxufSJdLCJmaWxlIjoic2NyaXB0cy9zZXJ2aWNlcy9tZXMtc2VydmljZXMuanMifQ==

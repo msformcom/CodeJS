@@ -1,15 +1,2 @@
-var _Sport_data;
-export class Sport {
-    // constructeur
-    // parametre avec "public" => devient un champs également
-    // initialisé avec la valeur passée en paramètre
-    constructor(sponsor, libelle) {
-        this.sponsor = sponsor;
-        // rend une donnée privée (js => effectif)
-        _Sport_data.set(this, "Toto");
-        // déclare un champ privé (ts => uniquement déclaratif)
-        this.data2 = "toto";
-        this.libelle = libelle;
-    }
-}
-_Sport_data = new WeakMap();
+var _Sport_data;export class Sport{constructor(t,o){this.sponsor=t,_Sport_data.set(this,"Toto"),this.data2="toto",this.libelle=o}}_Sport_data=new WeakMap;
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNjcmlwdHMvbW9kZWxzL3Nwb3J0LnRzIl0sIm5hbWVzIjpbIl9TcG9ydF9kYXRhIiwiU3BvcnQiLCJbb2JqZWN0IE9iamVjdF0iLCJzcG9uc29yIiwibGliZWxsZSIsInRoaXMiLCJzZXQiLCJkYXRhMiIsIldlYWtNYXAiXSwibWFwcGluZ3MiOiJBQUFBLElBQUlBLG1CQUNHLE1BQU1DLE1BSVRDLFlBQVlDLEVBQVNDLEdBQ2pCQyxLQUFLRixRQUFVQSxFQUVmSCxZQUFZTSxJQUFJRCxLQUFNLFFBRXRCQSxLQUFLRSxNQUFRLE9BQ2JGLEtBQUtELFFBQVVBLEdBR3ZCSixZQUFjLElBQUlRIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNsYXNzIFNwb3J0e1xyXG5cclxuICAgIC8vIGNvbnN0cnVjdGV1clxyXG4gICAgLy8gcGFyYW1ldHJlIGF2ZWMgXCJwdWJsaWNcIiA9PiBkZXZpZW50IHVuIGNoYW1wcyDDqWdhbGVtZW50XHJcbiAgICAvLyBpbml0aWFsaXPDqSBhdmVjIGxhIHZhbGV1ciBwYXNzw6llIGVuIHBhcmFtw6h0cmVcclxuICAgIGNvbnN0cnVjdG9yKHB1YmxpYyBzcG9uc29yOnN0cmluZyxsaWJlbGxlOnN0cmluZykge1xyXG4gICAgICAgIHRoaXMubGliZWxsZT1saWJlbGxlO1xyXG4gICAgICAgIFxyXG4gICAgfVxyXG4gICAgLy8gcmVuZCB1bmUgZG9ubsOpZSBwcml2w6llIChqcyA9PiBlZmZlY3RpZilcclxuICAgICNkYXRhPVwiVG90b1wiO1xyXG5cclxuICAgIC8vIGTDqWNsYXJlIHVuIGNoYW1wIHByaXbDqSAodHMgPT4gdW5pcXVlbWVudCBkw6ljbGFyYXRpZilcclxuICAgIHByaXZhdGUgZGF0YTI9XCJ0b3RvXCI7XHJcbiAgICBsaWJlbGxlIDogc3RyaW5nIDtcclxufSJdLCJmaWxlIjoic2NyaXB0cy9tb2RlbHMvc3BvcnQuanMifQ==
