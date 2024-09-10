@@ -7,5 +7,10 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/googlemaps": "^3.43.3",
+    "@types/jquery": "^3.5.30",
+    "@types/suncalc": "^1.9.2"
+  }
 }

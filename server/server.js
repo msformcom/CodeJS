@@ -19,7 +19,7 @@ server.get("/hello",(req,res)=>{
     // res => objet représentant nla réponse
     res.send("Hello world");
 });
-
+ 
 // middleware qui distribue les fichiers dans le dossier
 server.use(express.static("../moncode-ts/dist"));
 
