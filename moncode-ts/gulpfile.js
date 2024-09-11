@@ -5,34 +5,51 @@ const gulp=require("gulp");
 const ts=require("gulp-typescript");
 const minify=require("gulp-minify");
 const sourcemaps=require("gulp-sourcemaps");
+const ext_replace = require('gulp-ext-replace');
+
 
 // creation d'un compilateur configuré avec le fichier tsconfig.json
 const compilateur=ts.createProject("tsconfig.json");
 
-function compileTs(){
+// Génération des fichiers env ?
+function compileTsDev(){
     // Chercher les fichiers ts
     return gulp.src("./src/**/*.ts")
         // conserver les fichiers source
         .pipe(sourcemaps.init())
         // les compiler
         .pipe(compilateur())
+        // ecrire les commentaire sourcemaps
+        .pipe(sourcemaps.write())
+        .pipe(ext_replace('.mjs'))
+                // copier dans dist
+        .pipe(gulp.dest("./dev"));
+}
+
+function compileTsProd(){
+    // Chercher les fichiers ts sauf spec.ts
+    return gulp.src(["./src/**/*.ts","!./src/**/*.spec.ts"])
+        // conserver les fichiers source
+        // .pipe(sourcemaps.init())
+        // les compiler
+        .pipe(compilateur())
         // minification
        .pipe(minify({ext:{min:".mjs"} }))
         // ecrire les commentaire sourcemaps
-        .pipe(sourcemaps.write())
+        //.pipe(sourcemaps.write())
                 // copier dans dist
         .pipe(gulp.dest("./dist"));
 }
 
-function copyStaticFiles(cb){
+// copyStaticFiles avec parametre relatif au dossier
+function copyStaticFiles(directory){
     // Aller chercher les fichier à traiter
-    gulp.src("./src/**/*.{html,js,css}")
+    return gulp.src("./src/**/*.{html,js,css}")
         // une opération à faire sur chaque fichier
         .pipe(
             // copier dans dist
-            gulp.dest("./dist")
+            gulp.dest("./"+directory)
         );
-    cb();
 }
 
 
@@ -40,12 +57,20 @@ function copyStaticFiles(cb){
 
 
 // Enregistrement d'une tache gulp
-gulp.task("cp", copyStaticFiles);
-gulp.task("tsc", compileTs);
+gulp.task("cpdev", ()=>copyStaticFiles("dev"));
+gulp.task("cpprod", ()=>copyStaticFiles("dist"));
+gulp.task("tscdev", compileTsDev);
+gulp.task("tscprod", compileTsProd);
 
-gulp.task("default",()=>{
-    gulp.series("cp","tsc")();
-    gulp.watch("./src/**/*.{html,js,css}", copyStaticFiles);
-    gulp.watch("./src/**/*.ts", compileTs);
-  
+gulp.task("dev",()=>{
+    gulp.series("cpdev","tscdev")();
+    gulp.watch("./src/**/*.{html,js,css}", copyStaticFiles("dev"));
+    gulp.watch("./src/**/*.ts", compileTsDev);
+})
+
+gulp.task("prod",(cb)=>{
+     gulp.series("cpprod","tscprod")();
+    // gulp.watch("./src/**/*.{html,js,css}", copyStaticFiles("prod"));
+    // gulp.watch("./src/**/*.ts", compileTsProd);
+    cb();
 })
