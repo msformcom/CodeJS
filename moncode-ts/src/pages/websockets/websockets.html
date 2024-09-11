@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web sockets</title>
+    <script type="module" src="./websockets.mjs"></script>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Web sockets</h1>
+        <ul>
+            <li>websockets protocole de communication bi-directionnel</li>
+            <li>client se connecte et maintient une connection au server</li>
+            <li>très rapide</li>
+        </ul>
+        <div class="form-group">
+            <label>Texte</label>
+            <input class="form-control" id="input_text" type="text">
+            <button class="btn btn-danger" id="btn_envoyer">Envoyer</button>
+        </div>
+    
+    
+        <ul id="ul_messages"></ul>
+    </div>
+   
+</body>
+</html>

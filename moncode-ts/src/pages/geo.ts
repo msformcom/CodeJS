@@ -2,7 +2,7 @@ import { getPositionAsync } from "../scripts/services/mes-services";
 // Cette bibliothèque est écrite en js
 // => pas forcément d'export
 // => ce qui est exporté n'est pas typé
-import   '../scripts/services/suncalc.js';
+import   '/node_modules/suncalc/suncalc.js';
 declare const SunCalc : any;
 // Dire au compilateur que il existe qqchose SunCalc que je vais utilse
 

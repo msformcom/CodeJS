@@ -69,7 +69,7 @@ gulp.task("tscprod", compileTsProd);
 
 gulp.task("dev",()=>{
     gulp.series("cpdev","tscdev")();
-    gulp.watch("./src/**/*.{html,js,css}", copyStaticFiles("dev"));
+    gulp.watch("./src/**/*.{html,js,css}", ()=>copyStaticFiles("dev"));
     gulp.watch("./src/**/*.ts", compileTsDev);
 })
 
