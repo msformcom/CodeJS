@@ -1,4 +1,4 @@
-import { Sport } from "./models/sport.js";
+import { Sport } from "./models/sport";
 
 let a=1;
 let s=new Sport("nike","basket");

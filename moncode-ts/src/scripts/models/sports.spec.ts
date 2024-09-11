@@ -1,5 +1,5 @@
-import "jasmine"; // developpé en js 
-import { Sport } from "./sport";
+import 'jasmine'; // developpé en js 
+import { Sport } from "./sport"; // convention => pas d'extension
 // => npm i @types/jasmine --save-dev pour que ts reconnaisse les méthodes
 
 describe("classe Sport test",()=>{
